@@ -22,6 +22,6 @@ router.register('AboutUsMore', AboutUsMoreViewset)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('SendEmail/', SendEmailViewset)
+    # path('SendEmail/', SendEmailViewset)
 ]
 

@@ -123,15 +123,15 @@ class AboutUsMore(models.Model):
 #     message = models.TextField()
 
 
-class SendEmailModel(models.Model):
-    fullname = models.CharField(max_length=255)
-    email = models.EmailField()
-    message = models.TextField()
+# class SendEmailModel(models.Model):
+#     fullname = models.CharField(max_length=255)
+#     email = models.EmailField()
+#     message = models.TextField()
 
-    class Meta:
-        verbose_name = 'Отправленные емейлы'
-        verbose_name_plural = 'Отправленные емейлы'
+#     class Meta:
+#         verbose_name = 'Отправленные емейлы'
+#         verbose_name_plural = 'Отправленные емейлы'
 
-    def __str__(self):
-        return self.fullname
+#     def __str__(self):
+#         return self.fullname
 

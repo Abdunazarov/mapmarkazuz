@@ -53,7 +53,7 @@ class AboutUsMoreSerializer(serializers.ModelSerializer):
         fields = '__all__' 
 
 
-class SendEmailSerailizer(serializers.ModelSerializer):
-    class Meta:
-        model = SendEmailModel
-        fields = '__all__'
+# class SendEmailSerailizer(serializers.ModelSerializer):
+#     class Meta:
+#         model = SendEmailModel
+#         fields = '__all__'

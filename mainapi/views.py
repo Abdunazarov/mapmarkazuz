@@ -43,26 +43,26 @@ class AboutUsMoreViewset(viewsets.ModelViewSet):
     queryset = AboutUsMore.objects.all()
 
 
-from django.core.mail import send_mail
-import smtplib
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
-from rest_framework import status
+# from django.core.mail import send_mail
+# import smtplib
+# from rest_framework.decorators import api_view
+# from rest_framework.response import Response
+# from rest_framework import status
 
-@api_view(['GET', 'POST', 'PUT', 'DELETE'])
-def SendEmailViewset(request):
+# @api_view(['GET', 'POST', 'PUT', 'DELETE'])
+# def SendEmailViewset(request):
 
-    if request.method == 'GET':
-        model = SendEmailModel.objects.all()
-        serializer = SendEmailSerailizer(model, many=True)
-        return Response(serializer.data)
+#     if request.method == 'GET':
+#         model = SendEmailModel.objects.all()
+#         serializer = SendEmailSerailizer(model, many=True)
+#         return Response(serializer.data)
 
-    elif request.method == 'POST':
-        serializer = SendEmailSerailizer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+#     elif request.method == 'POST':
+#         serializer = SendEmailSerailizer(data=request.data)
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response(serializer.data, status=status.HTTP_201_CREATED)
+#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 
